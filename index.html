@@ -4,59 +4,110 @@
     <meta charset="UTF-8">
     <title>ARI Outbreak Monitoring System</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+
 </head>
 <body>
-    <header>
+    <!----------------------------------------- HEATHER ----------------------------------------->
+    <header id="header">
         <h1>Acute Respiratory Infection (ARI) Outbreak Monitoring System</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#prediction-form">Prediction</a></li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#prediction">Prediction</a></li>
             <li><a href="#results">Results</a></li>
-            <li><a href="#chart-placeholder">Graph</a></li>
+            <li><a href="#graph">Graph</a></li>
         </ul>
     </nav>
-    
-    <section class="input-section">
-        <form id="prediction-form">
-            <label for="month">Select Month:</label>
-            <select id="month" name="month">
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
-                <option value="4">April</option>
-                <option value="5">May</option>
-                <option value="6">June</option>
-                <option value="7">July</option>
-                <option value="8">August</option>
-                <option value="9">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-            </select>
-
-            <label for="year">Select Year:</label>
-            <input type="number" id="year" name="year" min="2023" max="2030" value="2025">
-
-            <button type="submit">Predict ARI Risk</button>
-        </form>
-    </section>
-
-    <section class="results-section">
-        <h2>Predicted ARI Risk by City</h2>
-        <div id="results">
-            <!-- Dynamic results go here -->
+    <!----------------------------------------- HOME PAGE ----------------------------------------->
+    <section class = "home" id="home">
+        <div class="home-container">
+            <div class="home-text">
+                <h1>Acute Respiratory Infection System</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                <a href="#about" class="explore-btn">About us</a>
+                </div>
+                <div class="home-images">
+                <img src="images/ARI1.jpg" alt="Image 1">
+                <img src="images/ARI1.jpg" alt="Image 2">
+                <img src="images/ARI1.jpg" alt="Image 3">
+            </div>
         </div>
     </section>
-
-    <section class="graph-section">
-        <h2>Prediction Graph</h2>
-        <div id="chart-placeholder">
-            <!-- Insert matplotlib PNG or interactive graph here -->
-            <img src="static/prediction_chart.png" alt="ARI Forecast Chart">
+    <!----------------------------------------- ABOUT PAGE ----------------------------------------->
+    <section class="about" id="about">
+        <div class="about-content">
+          <h1>About the System</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+            voluptate velit esse cillum dolore eu.
+          </p>
+          <a href="#prediction" class="btn-about">Go to Prediction</a>
+        </div>
+      </section>
+      
+    <!----------------------------------------- PREDICTION PAGE ----------------------------------------->
+    <section class="prediction" id="prediction">
+        <div class="prediction-container">
+            <h2>Predict ARI Risk</h2>
+            <form>
+                <div class="form-group">
+                <label for="month">Select Month:</label>
+                <select id="month" name="month">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                </div>
+        
+                <div class="prediction-form">
+                <label for="year">Select Year:</label>
+                <input type="number" id="year" name="year" min="2023" max="2030" value="2025">
+                </div>
+        
+                <button type="submit">Predict ARI Risk</button>
+            </form>
         </div>
     </section>
+  
+    <!----------------------------------------- RESULT PAGE ----------------------------------------->
+  <section class="results" id="results">
+    <div class="results-container">
+      <h2>Predicted ARI Risk by City</h2>
+      <div id="results-output">
+        <!-- Dynamic results go here -->
+      </div>
+    </div>
+  </section>
+  
+    <!----------------------------------------- GRAPH PAGE ----------------------------------------->
+  <section class="graph" id="graph">
+    <div class="graph-container">
+      <h2>Prediction Graph</h2>
+      <div id="chart-placeholder">
+        <img src="static/prediction_chart.png" alt="ARI Forecast Chart">
+      </div>
+    </div>
+  </section>
+  
+  
 </body>
 </html>
