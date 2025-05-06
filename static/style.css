@@ -172,6 +172,7 @@ nav a:hover {
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
   }
   
   /* Titles */
@@ -183,7 +184,7 @@ nav a:hover {
   }
   
   /* Form Styling */
-  .prediction-form {
+  .form-group, .prediction-form {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -204,14 +205,16 @@ nav a:hover {
   }
   
   button {
-    padding: 12px 25px;
+    display: inline-block;
+    padding: 10px 20px;
     background-color: #0a9396;
     color: white;
-    border: none;
-    border-radius: 6px;
+    text-decoration: none;
     cursor: pointer;
+    border-radius: 6px;
     font-size: 16px;
-    margin-top: 10px;
+    border: none;
+    margin-top: 20px;
     transition: background-color 0.3s ease;
   }
   
@@ -220,10 +223,61 @@ nav a:hover {
   }
   
 /* ----------------------------------This Part is the Result page---------------------------------- */
-  #results-output {
-    margin-top: 20px;
-    font-size: 1.1rem;
-  }
+ /* Results Page Styling */
+#results-output {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.prediction-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.prediction-item p {
+  margin: 5px 0;
+}
+
+.prediction-item strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.low {
+  color: green;
+  font-weight: bold;
+}
+
+.medium {
+  color: orange;
+  font-weight: bold;
+}
+
+.high {
+  color: red;
+  font-weight: bold;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0a9396;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  border: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #333;
+}
   
 /* ----------------------------------This Part is the Graph page---------------------------------- */
   #chart-placeholder img {
